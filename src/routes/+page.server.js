@@ -1,5 +1,6 @@
 export const actions = {
     default: async(event)=>{
+        console.log("lol")
         let block_data = {
         "blocks": [
             {
