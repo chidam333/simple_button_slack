@@ -2,10 +2,10 @@ import {env} from "$env/dynamic/private"
 
 export const actions = {
     default: async({request})=>{
-        let data = request.formData();
+        let data = await request.formData();
         let opt1 = data.get('opt1');
         let opt2 = data.get('opt2');
-         let block_data = {
+        let block_data = {
         "blocks": [
             {
                 "type": "actions",
