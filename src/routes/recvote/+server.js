@@ -15,4 +15,5 @@ export async function POST({request}){
     // }
     // )
     // return new Response(String("ok"))
+    return new Response(String(req))
 }
