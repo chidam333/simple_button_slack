@@ -1,9 +1,11 @@
 import {env} from "$env/dynamic/private"
 
 export const actions = {
-    default: async(event)=>{
-        console.log("lol")
-        let block_data = {
+    default: async({request})=>{
+        let data = request.formData();
+        let opt1 = data.get('opt1');
+        let opt2 = data.get('opt2');
+         let block_data = {
         "blocks": [
             {
                 "type": "actions",
@@ -13,7 +15,7 @@ export const actions = {
                         "text": {
                             "type": "plain_text",
                             "emoji": true,
-                            "text": "option 1"
+                            "text": `${opt1}`
                         },
                         "style": "primary",
                         "value": "click_me_123"
@@ -23,7 +25,7 @@ export const actions = {
                         "text": {
                             "type": "plain_text",
                             "emoji": true,
-                            "text": "option 2"
+                            "text": `${opt2}`
                         },
                         "style": "primary",
                         "value": "click_me_123"
