@@ -1,6 +1,4 @@
-import { error } from "@sveltejs/kit";
-import {env} from "$env/dynamic/private"
-export async function GET({req}){
+export function POST({req}){
     console.log({req})
     const {payload} = req.body;
     const actionPayload = JSON.parse(payload)
