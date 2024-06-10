@@ -30,8 +30,7 @@ export const actions = {
                     }
                 ]
             }
-        ]
-        }
+        ]}
         let fetch_response;
         try{
             fetch_response = fetch(env.SLACK_WEBHOOK,{
