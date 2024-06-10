@@ -32,11 +32,16 @@ export const actions = {
             }
         ]
         }
-        fetch(env.SLACK_WEBHOOK,{
-            method:'post',
-            body:JSON.stringify(block_data),
-            headers:{'Content-Type':'application/json'}
-        })
+        let fetch_response;
+        try{
+            fetch_response = fetch(env.SLACK_WEBHOOK,{
+                method:'post',
+                body:JSON.stringify(block_data),
+                headers:{'Content-Type':'application/json'}
+            })
+        }catch(e){
+            console.log({e,fetch_response})
+        }
         return {success:true}
     }
 }
