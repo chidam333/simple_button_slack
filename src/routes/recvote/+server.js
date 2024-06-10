@@ -1,6 +1,6 @@
-export function POST({req}){
-    console.log({req})
-    const {payload} = req.body;
+export function POST({url}){
+    console.log({url})
+    const {payload} = url.body;
     const actionPayload = JSON.parse(payload)
     let data = {
         text: "✅ Your response recorded",
