@@ -1,5 +1,5 @@
 export async function POST({request}){
-    let req = await request;
+    let req = await request.text();
     console.log({req})
     // console.log({request})
     // const {payload} = req;
