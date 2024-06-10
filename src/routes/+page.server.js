@@ -1,3 +1,5 @@
+import {env} from "$env/dynamic/private"
+
 export const actions = {
     default: async(event)=>{
         console.log("lol")
@@ -30,7 +32,7 @@ export const actions = {
             }
         ]
         }
-        fetch('https://hooks.slack.com/services/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',{
+        fetch(env.SLACK_WEBHOOK,{
             method:'post',
             body:JSON.stringify(block_data),
             headers:{'Content-Type':'application/json'}
