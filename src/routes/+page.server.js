@@ -30,7 +30,7 @@ export const actions = {
             }
         ]
         }
-        fetch('https://hooks.slack.com/services/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',{
+        fetch('https://hooks.slack.com/services/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',{
             method:'post',
             body:JSON.stringify(block_data),
             headers:{'Content-Type':'application/json'}
