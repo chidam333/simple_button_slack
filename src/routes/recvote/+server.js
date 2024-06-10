@@ -1,6 +1,6 @@
-export async function POST({request}){
-    let req = await request.text();
-    console.log({req})
+export async function POST({url}){
+    let payload = url.searchParams.get('payload');
+    console.log({payload})
     // console.log({request})
     // const {payload} = req;
     // const actionPayload = JSON.parse(payload)
