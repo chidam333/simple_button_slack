@@ -1,6 +1,7 @@
 export async function POST({request}){
-    let url =  new URLSearchParams(request.text());
-    let payload = url.get("payload")
+    let url = await request.text()
+    let url_param =  new URLSearchParams(url);
+    let payload = url_param.get("payload")
     const actionPayload = JSON.parse(payload)
     let data = {
         text: "✅ Your response recorded",
