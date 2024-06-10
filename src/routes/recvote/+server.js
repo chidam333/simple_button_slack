@@ -1,5 +1,5 @@
-export function POST({request}){
-    let req = request.json()
+export async function POST({request}){
+    let req = await request.json()
     console.log({req})
     // console.log({request})
     // const {payload} = url.body;
